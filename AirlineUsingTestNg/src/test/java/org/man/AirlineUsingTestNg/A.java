@@ -1,0 +1,6 @@
+package org.man.AirlineUsingTestNg;
+
+public class A {
+	
+
+}

@@ -1,0 +1,36 @@
+package org.snap.SnapDeal1;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class SearchPojoPage extends BaseClass {
+	
+	public SearchPojoPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(id="category2Data")
+	private WebElement scategory;
+
+	public WebElement getScategory() {
+		return scategory;
+	}
+
+	
+	}
+	
+   /*@FindBy(id="inputValEnter")
+   private WebElement input;
+   
+   @FindBy(xpath="//button[@class='searchformButton col-xs-4 rippleGrey']")
+   private WebElement search;
+
+public WebElement getInput() {
+	return input;
+}
+
+public WebElement getSearch() {
+	return search;
+}*/
+}

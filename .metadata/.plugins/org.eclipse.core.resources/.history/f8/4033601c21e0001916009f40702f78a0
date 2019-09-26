@@ -1,0 +1,14 @@
+package org.snap.SnapDeal1;
+
+public class A extends BaseClass{
+	public static void main(String[] args) {
+		launchBrowser();
+		winMax();
+		loadUrl("https://www.snapdeal.com/");
+		SearchPojoPage sp = new SearchPojoPage();
+		mover(sp.getScategory());
+		
+	}
+
+
+}

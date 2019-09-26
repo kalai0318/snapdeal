@@ -1,0 +1,12 @@
+package org.snap.SnapDeal1;
+
+import org.openqa.selenium.support.PageFactory;
+
+public class SearchPojoPage {
+	public SearchPojoPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+@FindBy(id="inputValEnter")
+
+}

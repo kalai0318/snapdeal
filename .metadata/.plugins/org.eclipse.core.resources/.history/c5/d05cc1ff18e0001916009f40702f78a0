@@ -1,0 +1,13 @@
+package org.snap.SnapDeal1;
+
+public class A extends BaseClass{
+	public static void main(String[] args) {
+		launchBrowser();
+		winMax();
+		getUrl("https://www.snapdeal.com/");
+		
+	}
+	
+	
+
+}

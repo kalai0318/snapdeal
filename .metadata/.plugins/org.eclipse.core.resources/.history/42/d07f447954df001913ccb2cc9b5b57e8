@@ -1,0 +1,46 @@
+package org.man.Train;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+
+public class Sample {
+	public static void main(String[] args) throws InterruptedException, AWTException {
+		ChromeOptions option = new ChromeOptions();
+        option.addArguments("--disable-notifications");
+	System.setProperty("webdriver.chrome.driver","C:\\Users\\Hp\\Desktop\\sai project\\Train\\Driver\\chromedriver.exe");
+	WebDriver driver =  new ChromeDriver(option);
+	driver.get("https://www.air.irctc.co.in/");
+	
+	driver.manage().window().maximize();
+	
+	
+	Actions a = new Actions(driver);
+	
+	WebElement from = driver.findElement(By.xpath("//label[@class='field__text'][1]"));
+    from.click();
+  
+    Thread.sleep(20000);
+    Robot r = new Robot();
+    
+    r.keyPress(KeyEvent.VK_DOWN);
+    r.keyPress(KeyEvent.VK_DOWN);
+    r.keyPress(KeyEvent.VK_DOWN);
+    r.keyPress(KeyEvent.VK_DOWN);
+    r.keyPress(KeyEvent.VK_ENTER);
+    
+    WebElement to = driver.findElement(By.id("57f5f8f8-b057-439e-8bb4-98abda1f56ff"));
+    to.click();
+	
+	
+	
+	}
+
+}
